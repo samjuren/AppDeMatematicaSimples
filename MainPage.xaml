@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDeMatematicaSimples.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="White"
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Olá, bem vindo"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Digite um numero"                
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Entry
+                x:Name="Number1"
+                Placeholder="Número"/>
+
+            <Entry
+                x:Name="Number2"
+                Placeholder="Número"/>
+
+            <Grid ColumnDefinitions="*,*,*,*" >
+                
+                <RadioButton                    
+                    x:Name="Rd_Somar"
+                    FontSize="10"
+                    Content="Somar"/>
+                
+                <RadioButton                   
+                    x:Name="Rd_Sub"
+                    Content="Subtrair"
+                    FontSize="10"
+                    Grid.Column="1"/>
+                
+                <RadioButton
+                    FontSize="10"
+                    x:Name="Rd_Div"
+                    Content="Multiplicar"                    
+                    Grid.Column="2"/>
+
+                <RadioButton        
+                    FontSize="10"
+                    x:Name="Rd_Mult"
+                    Content="Dividir"   
+                    Grid.Column="3"/>
+            </Grid>
+            
+            <Button
+                x:Name="Btn_somar"
+                Text="REALIZAR OPERAÇÃO"                
+                Clicked="Btn_somar_Clicked"
+                HorizontalOptions="Center" />
+
+           
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
